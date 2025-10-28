@@ -1,1 +1,148 @@
+/* ===== RESET & BASE ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ===== NAVBAR ===== */
+header {
+  background: #003366;
+  color: white;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #ffcc00;
+}
+
+/* ===== DROPDOWN MENU ===== */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background: #003366;
+  list-style: none;
+  top: 35px;
+  right: 0;
+  border-radius: 6px;
+  min-width: 180px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-content li a {
+  display: block;
+  padding: 0.6rem 1rem;
+  color: white;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.dropdown-content li a:hover {
+  background: #002855;
+  color: #ffcc00;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* ===== MAIN SECTION ===== */
+main.about {
+  max-width: 900px;
+  margin: 4rem auto;
+  padding: 0 1.5rem;
+  text-align: center;
+}
+
+.intro h1 {
+  font-size: 2.2rem;
+  color: #003366;
+  margin-bottom: 1rem;
+}
+
+.intro p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.profile-pic {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  margin-top: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  object-fit: cover;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: #003366;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  margin-top: 4rem;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .dropdown-content {
+    position: static;
+    box-shadow: none;
+  }
+}
 
